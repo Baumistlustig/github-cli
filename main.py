@@ -1,3 +1,5 @@
+#! /usr/bin/main.py
+
 import argparse
 import os
 from git import Repo
