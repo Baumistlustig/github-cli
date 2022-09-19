@@ -12,23 +12,23 @@ username = "Baumistlustig"
 g = Github(os.getenv("ACCESS_TOKEN"))
 
 # Create the parser
-my_parser = argparse.ArgumentParser(description='List the content of a folder')
+parser = argparse.ArgumentParser(description='List the content of a folder')
 
 # Add the arguments
-my_parser.add_argument('RepoName',
-                       metavar='repository_name',
-                       type=str,
-                       help='The name of the repository you want to create'
-                       )
+parser.add_argument('RepoName',
+                    metavar='repository_name',
+                    type=str,
+                    help='The name of the repository you want to create'
+                    )
 
-my_parser.add_argument('Path',
-                       metavar='repository_path',
-                       type=str,
-                       help='The path of the repository you want to create'
-                       )
+parser.add_argument('Path',
+                    metavar='repository_path',
+                    type=str,
+                    help='The path of the repository you want to create'
+                    )
 
 # Execute the parse_args() method
-args = my_parser.parse_args()
+args = parser.parse_args()
 
 input_path = args.Path
 repo_name = args.RepoName
