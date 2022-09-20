@@ -1,4 +1,4 @@
-#! /usr/bin/main.py
+#! /usr/bin/python
 
 import argparse
 import os
