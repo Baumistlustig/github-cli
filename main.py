@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-username = 'Baumistlustig'
+username = os.getenv('USERNAME')
 
 # Connect to GitHub Account
 g = Github(os.getenv('ACCESS_TOKEN'))
