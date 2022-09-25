@@ -26,7 +26,7 @@ def createRepo(args):
     input_path = args.Path
     repo_name = args.RepoName
 
-    remote_repo = user.create_repo(repo_name)
+    remote_repo = user.create_repo(repo_name, private=bool(args.Visibility))
 
     os.mkdir(input_path)
 
@@ -75,6 +75,12 @@ create_repo.add_argument('Path',
                          type=str,
                          help='The path of the repository you want to create'
                          )
+
+create_repo.add_argument('Visibility',
+                        metavar='visibility',
+                        type=str,
+                        help='The visibility of the repository you want to create <true | false>',
+                        )
 
 create_repo.set_defaults(func=createRepo)
 
